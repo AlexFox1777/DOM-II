@@ -41,9 +41,25 @@ window.addEventListener('resize', event => logo.textContent = "OOPS");
 
 //===============SELECT============
 
-const origin = document.querySelector('#origin');
-const copy = document.querySelector('#copy');
-origin.addEventListener('select', event =>
-    copy.textContent = event.target.value.substring(event.target.selectionStart,
-        event.target.selectionEnd));
+const origin = document.querySelector('text-content input');
+const copy = document.querySelector('#go');
+origin.addEventListener('select', event =>{
+    const select = event.target.value.substring(event.target.selectionStart,
+        event.target.selectionEnd);
+    copy.textContent = select;
+});
 
+//===============DBLCLICK============
+
+const body = document.querySelector('body');
+body.addEventListener('dblclick', event =>
+    event.target.style.color = "pink");
+
+//===============KEYDOWN============
+
+document.addEventListener('keydown', event =>
+                   alert(`KEY`));
+
+//===============KEYDOWN============
+
+window.addEventListener('scroll', event => alert(`SCROLL`));
